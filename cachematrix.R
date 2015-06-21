@@ -7,10 +7,10 @@
 #3. set the value of the invmat
 #4. get the value of the invmat
 
-makeMatInv <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
   m <- NULL  
   get <- function() x
-  setinv <- function(invmat) m <<- invmat  # stores the argument ('value') in global vector 'm'
+  setinv <- function(invmat) m <<- invmat  # stores the argument ('invmat') in global vector 'm'
   getinv <- function() m  # returns the global value of vector 'm'
   list(get = get,
        setinv = setinv,
